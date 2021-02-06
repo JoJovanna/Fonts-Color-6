@@ -1,0 +1,252 @@
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.block-center {
+  padding: 40px;
+  text-align: center;
+	background-color: rgba(255, 255, 255, 0.50);
+	height: 700px;
+	width: 50%;
+	margin-top: 170px;
+}
+.flex {
+	display: flex;
+	justify-content: center;
+	justify-content: space-around;
+}
+.foot {
+	background-color: mediumorchid;
+	background-color: rgba(55, 55, 55, 0.40);
+	width: 100%;
+	height: 55px;
+	border: solid black;
+	margin-top: 50px;
+	margin-bottom: 10px;
+}
+
+.flexfoot {
+	padding: 15px;
+	display: flex;
+	justify-content: center;
+	justify-content: space-around;
+}
+.blocks {
+  padding: 20px;
+  text-align: center;
+	display: flex;
+	height: 200px;
+	width: 600px;
+	background-color: mediumslateblue;
+	background-color: rgba(255, 255, 255, 0.0);
+	border: solid white;
+
+}
+p{
+  font-family: 'Oswald', sans-serif;
+}
+h3 {
+  color: black;
+}
+h2{
+  color: black;
+}
+
+.cont {
+  text-align: center;
+  padding-top: 50px;
+  padding-right: 5px;
+	width: 250px;
+	height: 800px;
+	border:solid white;
+	background-color: rgba(255, 255, 255, 0.20);
+	background-color
+	border-radius: 0%;
+	margin-top: 100px;
+}
+.flexblocks {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 100px;
+}
+.head {
+	text-align: center;
+	padding-bottom: 15px;
+	padding-top: 20px;
+	height: 100px;
+	width: 400px;
+}
+
+.flexhead {
+	padding-top: 50px;
+	display: flex;
+	justify-content: center;
+	margin-top: 30px;
+}
+
+
+.head {
+  color: #FFF;
+  transition: all 0.5s;
+  position: relative; 
+}
+.head span {
+  z-index: 2; 
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%; 
+}
+.head::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+  border: 1px solid rgba(255,255,255,0.2);
+  background-color: rgba(255,255,255,0.1);
+}
+.head::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+  border: 1px solid rgba(255,255,255,0.2);
+  background-color: rgba(255,255,255,0.1);
+}
+.head:hover::before {
+  transform: rotate(-45deg);
+  background-color: rgba(255,255,255,0);
+}
+.head:hover::after {
+  transform: rotate(45deg);
+  background-color: rgba(255,255,255,0);
+}
+
+/*cont animation*/
+
+.cont {
+  color: #FFF;
+  transition: all 0.5s;
+  position: relative;
+}
+.cont::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(255,255,255,0.1);
+  transition: all 0.3s;
+}
+.cont:hover::before {
+  opacity: 0 ;
+  transform: scale(0.5,0.5);
+}
+.cont::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border: 1px solid rgba(255,255,255,0.5);
+  transform: scale(1.2,1.2);
+}
+.cont:hover::after {
+  opacity: 1;
+  transform: scale(1,1);
+}
+/*block 1,2 animation*/
+
+.blocks {
+  color: #FFF;
+  transition: all 0.5s;
+  position: relative;
+}
+.blocks::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(255,255,255,0.1);
+  transition: all 0.3s;
+}
+.blocks:hover::before {
+  opacity: 0 ;
+  transform: scale(0.5,0.5);
+}
+.blocks::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border: 1px solid rgba(255,255,255,0.5);
+  transform: scale(1.2,1.2);
+}
+.blocks:hover::after {
+  opacity: 1;
+  transform: scale(1,1);
+}
+a {
+	color: white;
+	text-decoration: none;
+}
+@media (max-width: 786px) {
+  #banner h3 {
+    font-size: 15px;
+  }
+  .block-center {
+    align-self: center;
+    width: 365px;
+    height: 500px;
+  }
+  #banner2 {
+    flex-flow: column;
+    margin-top: 30px;
+  }
+  #banner{
+    flex-direction: column;
+  }
+  .cont{
+    align-self: center;
+    width: 350px;
+    height: 400px;
+  }
+  #banner2 h3 {
+    font-size: 15px;
+  }
+}
